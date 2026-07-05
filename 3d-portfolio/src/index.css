@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-cyber-bg: #050505;
+  --color-cyber-cyan: #00f0ff;
+  --color-cyber-cyan-hover: #00c0cc;
+  --color-cyber-magenta: #ff00ff;
+  --color-cyber-panel: #111111;
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-cyber-bg);
+  color: #e0e0e0;
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* Sharp panel styling replacing glassmorphism */
+.cyber-panel {
+  background: var(--color-cyber-panel);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-panel::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-cyber-cyan), transparent);
+  opacity: 0.5;
+}
+
+.cyber-button {
+  background: transparent;
+  color: var(--color-cyber-cyan);
+  border: 1px solid var(--color-cyber-cyan);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-button:hover {
+  background: var(--color-cyber-cyan);
+  color: var(--color-cyber-bg);
+  box-shadow: 0 0 15px var(--color-cyber-cyan);
+}
+
+.cyber-button-alt {
+  background: rgba(255, 0, 255, 0.1);
+  color: var(--color-cyber-magenta);
+  border: 1px solid var(--color-cyber-magenta);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.cyber-button-alt:hover {
+  background: var(--color-cyber-magenta);
+  color: var(--color-cyber-bg);
+  box-shadow: 0 0 15px var(--color-cyber-magenta);
+}
+
+.cyber-input {
+  background: #0a0a0a;
+  border: 1px solid #333;
+  color: #00f0ff;
+  font-family: var(--font-mono);
+}
+
+.cyber-input:focus {
+  border-color: #00f0ff;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+}
