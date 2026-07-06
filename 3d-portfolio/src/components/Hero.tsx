@@ -50,13 +50,16 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 1 }}
-          className="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-auto"
+          className="flex flex-col sm:flex-row flex-wrap items-center gap-6 w-full sm:w-auto"
         >
           <a href="#contact" className="cyber-button w-full sm:w-auto px-10 py-4 text-center">
             Initialize Contact
           </a>
           <a href="#experience" className="cyber-button-alt w-full sm:w-auto px-10 py-4 text-center">
             Load Experience
+          </a>
+          <a href="/Resume.pdf" download="Deepanshu_Srivastava_Resume.pdf" className="cyber-button w-full sm:w-auto px-10 py-4 text-center" style={{ backgroundColor: 'rgba(0, 240, 255, 0.1)', borderColor: '#00f0ff' }}>
+            Download Resume
           </a>
         </motion.div>
       </div>

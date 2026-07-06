@@ -34,6 +34,7 @@ function App() {
           <li><a href="#experience" className="text-[#a0a0a0] hover:text-[#00f0ff] transition-colors">Experience</a></li>
           <li><a href="#education" className="text-[#a0a0a0] hover:text-[#00f0ff] transition-colors">Education</a></li>
           <li><a href="#contact" className="cyber-button px-5 py-2">Contact</a></li>
+          <li><a href="/Resume.pdf" download="Deepanshu_Srivastava_Resume.pdf" className="cyber-button px-5 py-2" style={{ backgroundColor: 'rgba(0, 240, 255, 0.1)' }}>Resume</a></li>
         </ul>
 
         {/* Mobile Hamburger */}
@@ -54,6 +55,7 @@ function App() {
             <li><a href="#experience" onClick={() => setMenuOpen(false)} className="text-[#e0e0e0] hover:text-[#00f0ff]">Experience</a></li>
             <li><a href="#education" onClick={() => setMenuOpen(false)} className="text-[#e0e0e0] hover:text-[#00f0ff]">Education</a></li>
             <li><a href="#contact" onClick={() => setMenuOpen(false)} className="cyber-button px-8 py-3 mt-4 inline-block">Contact</a></li>
+            <li><a href="/Resume.pdf" download="Deepanshu_Srivastava_Resume.pdf" onClick={() => setMenuOpen(false)} className="cyber-button px-8 py-3 mt-4 inline-block" style={{ backgroundColor: 'rgba(0, 240, 255, 0.1)' }}>Resume</a></li>
           </ul>
         </div>
       </nav>
